@@ -1,6 +1,6 @@
 package ltech.app.votacao_big_brother.entity;
 
-import java.sql.Date;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -18,7 +18,7 @@ public class Voto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date horaVoto;
+    private LocalDateTime horaVoto;
     @ManyToOne
     private Candidato candidatoVotado;
 
